@@ -1,0 +1,33 @@
+# Python bytecode and virtual environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Build output and package metadata
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Tool caches and test coverage
+.ruff_cache/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+!.env.template
+
+# IDE and operating system files
+.idea/
+.DS_Store
+Thumbs.db
