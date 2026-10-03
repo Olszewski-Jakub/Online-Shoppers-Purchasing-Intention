@@ -31,3 +31,6 @@ coverage.xml
 .idea/
 .DS_Store
 Thumbs.db
+
+# Milestone submission archives
+/23710521_Milestone*.zip
