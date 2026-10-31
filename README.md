@@ -6,8 +6,19 @@ CT4101 Machine Learning portfolio project.
 
 - **Question:** Can browsing behaviour and session information predict whether a shopping session results in a purchase?
 - **Target:** `Revenue` - purchase or no purchase.
-- **Status:** Milestone 1 - proposal and setup.
+- **Status:** Milestone 2 - data audit, preprocessing and baseline implemented.
 
+
+## Baseline results
+
+The majority-class baseline always predicts no purchase. Across five stratified
+cross-validation folds on the training data, it achieves **84.37% accuracy** but
+**0% purchase-class F1, precision and recall**. The high accuracy comes from the
+class imbalance; it misses every purchase. Later models will be compared mainly
+using purchase-class F1. The test set remains unused.
+
+These results describe the supplied historical sessions; they do not establish
+performance on future customers or explain what causes a purchase.
 
 ## Setup
 
