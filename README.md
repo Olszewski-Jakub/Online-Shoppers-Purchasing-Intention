@@ -6,8 +6,7 @@ CT4101 Machine Learning portfolio project.
 
 - **Question:** Can browsing behaviour and session information predict whether a shopping session results in a purchase?
 - **Target:** `Revenue` - purchase or no purchase.
-- **Status:** Milestone 2 - data audit, preprocessing and baseline implemented.
-
+- **Status:** Milestone 3
 
 ## Baseline results
 
@@ -34,6 +33,26 @@ and majority-class baseline methods:
 - [scikit-learn: StratifiedKFold](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.StratifiedKFold.html) - constructing folds that keep similar class proportions.
 - [scikit-learn: Metrics and scoring](https://scikit-learn.org/stable/modules/model_evaluation.html) - accuracy, precision, recall, F1 and scorers, including interpretation of purchase-class performance under class imbalance.
 - [scikit-learn: DummyClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.dummy.DummyClassifier.html) - the majority-class baseline using `strategy="most_frequent"`.
+
+## Milestone 3 assistance declaration
+
+The following online resources explain the methods used in notebooks 04-06
+and support logistic regression, constrained decision trees, class weighting,
+model comparison and out-of-fold error analysis. The Milestone 2 references
+also apply to the reused preprocessing, baseline and evaluation setup.
+
+- [scikit-learn: LogisticRegression](https://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LogisticRegression.html) - regularisation strength, the `lbfgs` solver, iteration limits and default versus balanced class weights.
+- [scikit-learn: Decision Trees](https://scikit-learn.org/stable/modules/tree.html) - controlling tree complexity with maximum depth and minimum leaf size to reduce overfitting.
+- [scikit-learn: DecisionTreeClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.tree.DecisionTreeClassifier.html) - the `max_depth`, `min_samples_leaf`, `class_weight` and `random_state` settings used in the six tree configurations.
+- [scikit-learn: Cross-validation](https://scikit-learn.org/stable/modules/cross_validation.html) - selecting settings on training folds while keeping a separate test set for final evaluation.
+- [scikit-learn: cross_validate](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_validate.html) - evaluating several metrics on the same folds and summarising fold scores for model comparison.
+- [scikit-learn: Metrics and scoring](https://scikit-learn.org/stable/modules/model_evaluation.html) - purchase-class F1, precision, recall and accuracy, including the precision/recall trade-off.
+- [scikit-learn: cross_val_predict](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.cross_val_predict.html) - generating predictions for each session from a model trained on other folds, and the limits of using pooled predictions to estimate generalisation performance.
+- [scikit-learn: confusion_matrix](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html) - interpreting true negatives, false positives, false negatives and true positives in the error analysis.
+
+These sources support the methods rather than establish the best settings for
+this dataset. The chosen depth and class weights follow from the recorded
+cross-validation results; the minimum leaf size of 20 was fixed, not optimised.
 
 ## Setup
 
